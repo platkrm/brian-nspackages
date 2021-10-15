@@ -5,7 +5,7 @@ metadata:
   annotations:
     blueprints.cloud.google.com/title: Istio Namespace
     cft.dev/base-version: '1'
-    cft.dev/package-version: "2"
+    cft.dev/package-version: "3"
 upstream:
   type: git
   git:

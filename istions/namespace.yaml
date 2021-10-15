@@ -6,4 +6,5 @@ metadata:
     privilege: standard
     istio-injection: enabled
   annotations:
+    network-type: mesh
     cft.dev.tenant/name: example
