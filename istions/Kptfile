@@ -4,19 +4,19 @@ metadata:
   name: istions
   annotations:
     blueprints.cloud.google.com/title: Istio Namespace
-    cft.dev/base-version: "1"
-    cft.dev/package-version: "1"
+    cft.dev/base-version: '1'
+    cft.dev/package-version: "2"
 upstream:
   type: git
   git:
-    repo: https://github.com/platkrm/brian-nspackages
+    repo: 'https://github.com/platkrm/brian-nspackages'
     directory: /basens
     ref: main
   updateStrategy: resource-merge
 upstreamLock:
   type: git
   git:
-    repo: https://github.com/platkrm/brian-nspackages
+    repo: 'https://github.com/platkrm/brian-nspackages'
     directory: /basens
     ref: main
     commit: d52cb94bffae91ce9bb9ac028af3c51f46dc8286
@@ -26,9 +26,11 @@ info:
   - tenant
 pipeline:
   mutators:
-  - image: us-west1-docker.pkg.dev/cad-demo-327615/kpt-functions/expand-tenant-cr:latest
+  - image: >-
+      us-west1-docker.pkg.dev/cad-demo-327615/kpt-functions/expand-tenant-cr:latest
   validators:
-  - image: us-west1-docker.pkg.dev/cad-demo-327615/kpt-functions/validate-tenant:latest
-  - image: gcr.io/kpt-fn/kubeval:v0.1
+  - image: >-
+      us-west1-docker.pkg.dev/cad-demo-327615/kpt-functions/validate-tenant:latest
+  - image: 'gcr.io/kpt-fn/kubeval:v0.1'
     configMap:
-      ignore_missing_schemas: "true"
+      ignore_missing_schemas: 'true'
