@@ -1,0 +1,11 @@
+apiVersion: cft.dev/v1alpha1
+kind: Tenant
+metadata:
+  name: example
+  annotations:
+    config.kubernetes.io/local-config: 'true'
+spec:
+  roles:
+  - role: admin
+    groups:
+    - example-admins@example.com
