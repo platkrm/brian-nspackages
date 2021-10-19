@@ -1,6 +1,6 @@
 apiVersion: cft.dev/v1alpha1
 kind: Tenant
-metadata: # kpt-merge: /example
+metadata:
   name: example
   annotations:
     config.kubernetes.io/local-config: 'true'
