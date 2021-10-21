@@ -11,9 +11,10 @@ info:
   - tenant
 pipeline:
   mutators:
-    - image: us-west1-docker.pkg.dev/cad-demo-327615/kpt-functions/expand-tenant-cr:latest
+    - image: us-west1-docker.pkg.dev/cad-demo-327615/kpt-functions/set-namespace:latest
+      configMap:
+        namespace: example
   validators:
-    - image: us-west1-docker.pkg.dev/cad-demo-327615/kpt-functions/validate-tenant:latest
     - image: gcr.io/kpt-fn/kubeval:v0.1
       configMap:
         ignore_missing_schemas: "true"
