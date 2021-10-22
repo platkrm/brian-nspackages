@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata: # kpt-merge: example/kptfile.kpt.dev
+  name: kptfile.kpt.dev
+  namespace: basens
+data:
+  name: basens
