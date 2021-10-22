@@ -5,5 +5,4 @@ metadata:
   labels:
     privilege: standard
   annotations:
-    cft.dev.tenant/name: example
     cft.dev/notes: Namespace labels can be used to target Gatekeeper constraints at sets of Namespaces

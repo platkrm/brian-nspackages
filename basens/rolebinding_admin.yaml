@@ -3,8 +3,6 @@ kind: RoleBinding
 metadata:
   name: admin
   namespace: example
-  annotations:
-    cft.dev.tenant/name: example
 roleRef:
   kind: ClusterRole
   name: admin
