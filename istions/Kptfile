@@ -9,14 +9,14 @@ metadata:
 upstream:
   type: git
   git:
-    repo: https://github.com/platkrm/brian-nspackages
+    repo: 'https://github.com/platkrm/brian-nspackages'
     directory: /basens
     ref: main
   updateStrategy: resource-merge
 upstreamLock:
   type: git
   git:
-    repo: https://github.com/platkrm/brian-nspackages
+    repo: 'https://github.com/platkrm/brian-nspackages'
     directory: /basens
     ref: main
     commit: 174437dbaf9eaa14158bd5f31d4d5d74eb20be7e
@@ -26,8 +26,9 @@ info:
   - tenant
 pipeline:
   mutators:
-  - image: us-west1-docker.pkg.dev/cad-demo-327615/kpt-functions/set-namespace:latest
+  - image: >-
+      us-west1-docker.pkg.dev/cad-demo-327615/kpt-functions/set-namespace:latest
   validators:
-  - image: gcr.io/kpt-fn/kubeval:v0.1
+  - image: 'gcr.io/kpt-fn/kubeval:v0.1'
     configMap:
       ignore_missing_schemas: 'true'
