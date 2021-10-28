@@ -7,3 +7,4 @@ metadata: # kpt-merge: /example
     istio-injection: enabled
   annotations:
     cft.dev/notes: 'Namespace labels can be used to target Gatekeeper constraints at sets of Namespaces'
+    network-type: 'mesh'
