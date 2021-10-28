@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: LimitRange
+metadata:
+  name: istions
+  namespace: basens
+spec:
+  limits:
+  - type: Container
+    max:
+      cpu: '1'
+      memory: 1G
