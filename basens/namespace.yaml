@@ -1,8 +1,0 @@
-apiVersion: v1
-kind: Namespace
-metadata:
-  name: example
-  labels:
-    privilege: standard
-  annotations:
-    cft.dev/notes: Namespace labels can be used to target Gatekeeper constraints at sets of Namespaces

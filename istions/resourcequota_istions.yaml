@@ -1,9 +1,0 @@
-apiVersion: v1
-kind: ResourceQuota
-metadata:
-  name: istions
-  namespace: istions
-spec:
-  hard:
-    cpu: '10'
-    memory: 10G
