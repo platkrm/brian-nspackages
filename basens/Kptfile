@@ -7,4 +7,10 @@ metadata:
 info:
   description: Base Namespace blueprint
   keywords:
-  - namespace
+    - namespace
+pipeline:
+  mutators:
+    - image: gcr.io/kpt-fn/set-namespace:v0.3.4
+      configPath: package-context.yaml
+    - image: gcr.io/kpt-fn/apply-replacements:v0.1.0
+      configPath: update-rolebinding.yaml
