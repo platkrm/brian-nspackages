@@ -11,7 +11,7 @@ replacements:
     fieldPath: data.name
   targets:
   - select:
-      name: app-admin-binding
+      name: app-admin
       kind: RoleBinding
     fieldPaths:
     - subjects.[kind=Group].name
