@@ -4,3 +4,4 @@ metadata: # kpt-merge: /example
   name: istions
   labels:
     privilege: standard
+    istio-injection: enabled
