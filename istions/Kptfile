@@ -1,0 +1,33 @@
+apiVersion: kpt.dev/v1
+kind: Kptfile
+metadata:
+  name: istions
+  annotations:
+    cft.dev/base-version: '4'
+    config.kubernetes.io/local-config: 'true'
+    blueprints.cloud.google.com/title: 'Istio Namespace'
+    cft.dev/package-version: '1'
+upstream:
+  type: git
+  git:
+    repo: https://github.com/platkrm/brian-nspackages
+    directory: /basens
+    ref: main
+  updateStrategy: resource-merge
+upstreamLock:
+  type: git
+  git:
+    repo: https://github.com/platkrm/brian-nspackages
+    directory: /basens
+    ref: main
+    commit: 9ff0c07db46c2eb532196b70ceb521f8dd717506
+info:
+  description: Namespace with Istio sidecars enabled
+  keywords:
+  - namespace
+pipeline:
+  mutators:
+  - image: gcr.io/kpt-fn/set-namespace:v0.3.4
+    configPath: package-context.yaml
+  - image: gcr.io/kpt-fn/apply-replacements:v0.1.0
+    configPath: update-rolebinding.yaml
