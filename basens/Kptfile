@@ -4,7 +4,7 @@ metadata:
   name: basens
   annotations:
     config.kubernetes.io/local-config: "true"
-    cft.dev/base-version: '4'
+    cft.dev/base-version: '5'
     blueprints.cloud.google.com/title: 'Base Namespace'
 info:
   description: Base Namespace blueprint
