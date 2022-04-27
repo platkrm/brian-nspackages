@@ -6,7 +6,7 @@ metadata:
     cft.dev/base-version: '4'
     config.kubernetes.io/local-config: 'true'
     blueprints.cloud.google.com/title: 'Istio Namespace'
-    cft.dev/package-version: '1'
+    cft.dev/package-version: '2'
 upstream:
   type: git
   git:
