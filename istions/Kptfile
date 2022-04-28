@@ -6,7 +6,7 @@ metadata:
     blueprints.cloud.google.com/title: 'Istio Namespace'
     cft.dev/base-version: '5'
     config.kubernetes.io/local-config: 'true'
-    cft.dev/package-version: '2'
+    cft.dev/package-version: '3'
 upstream:
   type: git
   git:
@@ -27,7 +27,4 @@ info:
   - namespace
 pipeline:
   mutators:
-  - image: 'gcr.io/kpt-fn/set-namespace:v0.3.4'
-    configPath: package-context.yaml
-  - image: 'gcr.io/kpt-fn/apply-replacements:v0.1.0'
-    configPath: update-rolebinding.yaml
+  - image: 'gcr.io/cad-demo-sdk/set-namespace:latest'
