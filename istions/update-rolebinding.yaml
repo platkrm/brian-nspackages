@@ -14,7 +14,7 @@ replacements:
       name: app-admin
       kind: RoleBinding
     fieldPaths:
-    - subjects.[kind=Group].name
+    - 'subjects.[kind=Group].name'
     options:
-      delimiter: '.'
+      delimiter: .
       index: 0
