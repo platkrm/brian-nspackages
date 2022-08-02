@@ -1,0 +1,20 @@
+apiVersion: fn.kpt.dev/v1alpha1
+kind: ApplyReplacements
+metadata:
+  name: default
+  annotations:
+    config.kubernetes.io/local-config: "true"
+replacements:
+- source:
+    kind: ConfigMap
+    name: kptfile.kpt.dev
+    fieldPath: data.name
+  targets:
+  - select:
+      kind: RoleBinding
+      name: app-admin
+    fieldPaths:
+    - subjects.0.name
+    options:
+      delimiter: .
+      index: 0
